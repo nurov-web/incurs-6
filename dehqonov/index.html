@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PARDA STORE — Интернет-магазин штор</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="headbar">
+    <div class="logo">
+      <span class="swoosh">
+        <svg width="34" height="34" viewBox="0 0 100 100" fill="none">
+          <path d="M50 8 C 30 8 30 50 50 50 C 70 50 70 92 50 92" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <circle cx="50" cy="8" r="4" fill="var(--accent)"/>
+          <circle cx="50" cy="92" r="4" fill="var(--accent)"/>
+        </svg>
+      </span>
+      <div>
+        <div class="word">Parda<span class="word-accent">.</span></div>
+        <div class="tag">textile house</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#top" class="active" data-i18n="nav_home">Главная</a>
+      <a href="#catalog" data-i18n="nav_catalog">Каталог</a>
+      <a href="#promo" data-i18n="nav_promo">Акции</a>
+      <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
+    </nav>
+
+    <div class="head-actions">
+      <div class="lang-switch">
+        <button data-lang="ru" class="active">RU</button>
+        <button data-lang="tj">TJ</button>
+      </div>
+      <button class="icon-btn" id="favBtn" title="Избранное">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        <span class="cart-count" id="favCount">0</span>
+      </button>
+      <button class="icon-btn" title="Корзина" id="cartBtn">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="btn btn-outline" id="openLogin" data-i18n="btn_login">Войти</button>
+      <button class="btn btn-solid" id="openRegister" data-i18n="btn_register">Регистрация</button>
+      <button class="burger" id="burgerBtn" aria-label="menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#top" data-i18n="nav_home">Главная</a>
+    <a href="#catalog" data-i18n="nav_catalog">Каталог</a>
+    <a href="#promo" data-i18n="nav_promo">Акции</a>
+    <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
+  </nav>
+</header>
+
+<!-- ============ HERO SLIDER ============ -->
+<section class="hero" id="top">
+  <div class="slides" id="slides">
+
+    <div class="slide">
+      <div class="slide-content">
+        <div class="slide-eyebrow" data-i18n="s1_eyebrow">НОВАЯ КОЛЛЕКЦИЯ 2026</div>
+        <h1 class="slide-title" data-i18n="s1_title">ШТОРЫ<br><span>УЮТ</span> В ДОМЕ</h1>
+        <p class="slide-desc" data-i18n="s1_desc">Плотные и лёгкие ткани для вашего интерьера. Комфорт и стиль в каждой комнате.</p>
+        <div class="slide-price mono">899 <span data-i18n="curr">смн.</span><span class="old">1199 <span data-i18n="curr">смн.</span></span></div>
+        <button class="btn btn-solid slide-cta" data-i18n="s1_cta">Смотреть коллекцию</button>
+      </div>
+      <div class="slide-media">
+        <img src="https://images.unsplash.com/photo-1671328920741-ea6f4233dc07?w=900&q=80&auto=format&fit=crop" alt="Шторы">
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-content">
+        <div class="slide-eyebrow" data-i18n="s2_eyebrow">ЛЕГЕНДАРНАЯ КЛАССИКА</div>
+        <h1 class="slide-title" data-i18n="s2_title">БЛЭКАУТ<br><span>НАВСЕГДА</span></h1>
+        <p class="slide-desc" data-i18n="s2_desc">Плотные шторы блэкаут для спальни. Полная защита от света в любое время суток.</p>
+        <div class="slide-price mono">749 <span data-i18n="curr">смн.</span></div>
+        <button class="btn btn-solid slide-cta" data-i18n="s2_cta">Купить сейчас</button>
+      </div>
+      <div class="slide-media">
+        <img src="https://images.unsplash.com/photo-1775058800623-90ae2ad7cdcf?w=900&q=80&auto=format&fit=crop" alt="Блэкаут шторы">
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-content">
+        <div class="slide-eyebrow" data-i18n="s3_eyebrow">НОВИНКА · ТЮЛЬ</div>
+        <h1 class="slide-title" data-i18n="s3_title">ЛЁГКОСТЬ<br><span>И</span> СВЕТ</h1>
+        <p class="slide-desc" data-i18n="s3_desc">Тюль и органза для гостиной. Мягкий свет и воздушность в вашем доме.</p>
+        <div class="slide-price mono">450 <span data-i18n="curr">смн.</span></div>
+        <button class="btn btn-solid slide-cta" data-i18n="s3_cta">В каталог</button>
+      </div>
+      <div class="slide-media">
+        <img src="https://images.unsplash.com/photo-1528822855841-e8bf3134cdc9?w=900&q=80&auto=format&fit=crop" alt="Тюль">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero-dots" id="heroDots"></div>
+  <div class="hero-arrows">
+    <button id="prevSlide">&#8592;</button>
+    <button id="nextSlide">&#8594;</button>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- ============ CATALOG ============ -->
+<section class="section" id="catalog">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-eyebrow" data-i18n="cat_eyebrow">КАТАЛОГ</div>
+        <h2 class="sec-title" data-i18n="cat_title">Шторы и тюль для дома</h2>
+      </div>
+      <p class="sec-sub" data-i18n="cat_sub">Качественные ткани для штор. Оплата в сомони, доставка по всей стране.</p>
+    </div>
+
+    <div class="chips" id="chipsWrap">
+      <button class="chip active" data-cat="all" data-i18n="chip_all">Все</button>
+      <button class="chip" data-cat="blackout" data-i18n="chip_men">Блэкаут</button>
+      <button class="chip" data-cat="tulle" data-i18n="chip_women">Тюль</button>
+      <button class="chip" data-cat="classic" data-i18n="chip_run">Классика</button>
+      <button class="chip" data-cat="kids" data-i18n="chip_kids">Детские</button>
+      <button class="chip" data-cat="accessories" data-i18n="chip_clothing">Аксессуары</button>
+    </div>
+
+    <div class="grid" id="productGrid"></div>
+
+    <div class="grid-more">
+      <button class="btn btn-outline" id="showMoreBtn" data-i18n="btn_more">Показать ещё</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROMO ============ -->
+<section class="section" id="promo" style="padding-top:0;">
+  <div class="wrap">
+    <div class="promo-row">
+      <div class="promo">
+        <img src="https://images.unsplash.com/photo-1650682933468-50feb46bae4b?w=1200&q=80&auto=format&fit=crop" alt="promo1">
+        <div class="promo-inner">
+          <span class="k" data-i18n="p1_k">СКИДКА 30%</span>
+          <h3 data-i18n="p1_t">Осенняя коллекция штор</h3>
+        </div>
+      </div>
+      <div class="promo">
+        <img src="https://images.unsplash.com/photo-1646125634271-be91df6ec0de?w=1200&q=80&auto=format&fit=crop" alt="promo2">
+        <div class="promo-inner">
+          <span class="k" data-i18n="p2_k">НОВИНКА</span>
+          <h3 data-i18n="p2_t">Коллекция тюля</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-eyebrow" data-i18n="gal_eyebrow">СТИЛЬ В ДЕЛЕ</div>
+        <h2 class="sec-title" data-i18n="gal_title">Ещё больше кадров</h2>
+      </div>
+    </div>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1616434602533-32fcefcc3621?w=600&q=80&auto=format&fit=crop" alt="Parda gallery 1">
+      <img src="https://images.unsplash.com/photo-1628428988931-14bc33099075?w=600&q=80&auto=format&fit=crop" alt="Parda gallery 2">
+      <img src="https://images.unsplash.com/photo-1519035350952-38d18a3848cf?w=600&q=80&auto=format&fit=crop" alt="Parda gallery 3">
+      <img src="https://images.unsplash.com/photo-1673778577496-27df3af6a61c?w=600&q=80&auto=format&fit=crop" alt="Parda gallery 4">
+      <img src="https://images.unsplash.com/photo-1674951780257-58bb3b7038e5?w=600&q=80&auto=format&fit=crop" alt="Parda gallery 5">
+      <img src="https://images.unsplash.com/photo-1775058800676-bff513fc73eb?w=600&q=80&auto=format&fit=crop" alt="Parda gallery 6">
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contacts">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">
+          <span class="swoosh">
+            <svg width="26" height="26" viewBox="0 0 100 100" fill="none">
+              <path d="M50 8 C 30 8 30 50 50 50 C 70 50 70 92 50 92" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" fill="none"/>
+            </svg>
+          </span>
+          <div class="word" style="font-size:22px;">Parda<span class="word-accent">.</span></div>
+        </div>
+        <p class="foot-desc" data-i18n="foot_desc">Официальный интернет-магазин штор и тюля. Оплата в сомони, честные цены, быстрая доставка.</p>
+        <form class="newsletter" id="newsletterForm">
+          <input type="email" required data-i18n-ph="foot_email_ph" placeholder="Ваш email">
+          <button type="submit" data-i18n="foot_sub">OK</button>
+        </form>
+      </div>
+      <div>
+        <div class="foot-title" data-i18n="foot_shop">Магазин</div>
+        <div class="foot-links">
+          <a href="#catalog" data-cat="blackout" data-i18n="foot_l1">Блэкаут</a>
+          <a href="#catalog" data-cat="tulle" data-i18n="foot_l2">Тюль</a>
+          <a href="#catalog" data-cat="kids" data-i18n="foot_l3">Детям</a>
+          <a href="#catalog" data-cat="accessories" data-i18n="foot_l4">Аксессуары</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-title" data-i18n="foot_help">Помощь</div>
+        <div class="foot-links">
+          <a href="#" data-i18n="foot_l5">Доставка</a>
+          <a href="#" data-i18n="foot_l6">Возврат</a>
+          <a href="#" data-i18n="foot_l7">Размерная сетка</a>
+          <a href="#" data-i18n="foot_l8">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-title" data-i18n="foot_contacts">Контакты</div>
+        <div class="foot-links">
+          <a href="tel:+992000000000">+992 00 000 00 00</a>
+          <a href="mailto:info@pardastore.tj">info@pardastore.tj</a>
+          <a href="#" data-i18n="foot_addr">г. Худжанд, Таджикистан</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot_rights">© 2026 PARDA STORE. Все права защищены.</span>
+      <span data-i18n="foot_note">Демо-сайт создан в учебных целях.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay" id="cartOverlay">
+  <div class="drawer">
+    <div class="drawer-head">
+      <h2 data-i18n="cart_title">Корзина</h2>
+      <button class="modal-close" id="closeCart">&times;</button>
+    </div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-empty" id="cartEmpty" data-i18n="cart_empty">Ваша корзина пуста</div>
+    <div class="drawer-foot" id="cartFoot">
+      <div class="cart-total-row">
+        <span data-i18n="cart_total">Итого</span>
+        <span class="mono" id="cartTotal">0 смн.</span>
+      </div>
+      <button class="btn btn-solid" id="toCheckout" data-i18n="cart_checkout" style="width:100%;padding:14px;">Оформить заказ</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CHECKOUT MODAL ============ -->
+<div class="overlay" id="checkoutOverlay">
+  <div class="modal modal-wide">
+    <button class="modal-close" id="closeCheckout">&times;</button>
+    <h2 data-i18n="checkout_title">Оформление заказа</h2>
+    <p class="modal-sub" data-i18n="checkout_sub">Заполните данные для доставки и оплаты</p>
+    <form id="checkoutForm">
+      <div class="field">
+        <label data-i18n="lbl_name">Имя</label>
+        <input type="text" required data-i18n-ph="ph_name" placeholder="Ваше имя">
+      </div>
+      <div class="field">
+        <label data-i18n="lbl_phone">Телефон</label>
+        <input type="tel" required data-i18n-ph="ph_phone" placeholder="+992 00 000 00 00">
+      </div>
+      <div class="field">
+        <label data-i18n="lbl_addr">Адрес доставки</label>
+        <input type="text" required data-i18n-ph="ph_addr" placeholder="Город, улица, дом">
+      </div>
+      <div class="field">
+        <label data-i18n="lbl_pay">Способ оплаты</label>
+        <div class="pay-options" id="payOptions">
+          <button type="button" class="pay-opt active" data-pay="card" data-i18n="pay_card">Карта (Корти Миллӣ)</button>
+          <button type="button" class="pay-opt" data-pay="cash" data-i18n="pay_cash">Наличными курьеру</button>
+        </div>
+      </div>
+      <div class="field card-fields" id="cardFields">
+        <label data-i18n="lbl_card">Номер карты</label>
+        <input type="text" inputmode="numeric" maxlength="19" data-i18n-ph="ph_card" placeholder="0000 0000 0000 0000">
+      </div>
+      <div class="checkout-summary">
+        <span data-i18n="checkout_total">К оплате</span>
+        <span class="mono" id="checkoutTotal">0 смн.</span>
+      </div>
+      <button type="submit" class="btn btn-solid" style="width:100%;padding:14px;" data-i18n="checkout_confirm">Подтвердить заказ</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ ORDER SUCCESS MODAL ============ -->
+<div class="overlay" id="successOverlay">
+  <div class="modal">
+    <button class="modal-close" id="closeSuccess">&times;</button>
+    <div class="success-icon">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+    </div>
+    <h2 data-i18n="success_title">Заказ оформлен!</h2>
+    <p class="modal-sub" data-i18n="success_sub">Спасибо за покупку. Мы свяжемся с вами в ближайшее время для подтверждения.</p>
+    <button class="btn btn-solid" id="successClose" style="width:100%;padding:14px;" data-i18n="success_btn">Отлично</button>
+  </div>
+</div>
+
+<!-- ============ LOGIN MODAL ============ -->
+<div class="overlay" id="loginOverlay">
+  <div class="modal">
+    <button class="modal-close" id="closeLogin">&times;</button>
+    <span class="swoosh">
+      <svg width="26" height="26" viewBox="0 0 100 100" fill="none">
+        <path d="M50 8 C 30 8 30 50 50 50 C 70 50 70 92 50 92" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" fill="none"/>
+      </svg>
+    </span>
+    <h2 data-i18n="login_title">С возвращением</h2>
+    <p class="modal-sub" data-i18n="login_sub">Войдите, чтобы продолжить покупки</p>
+    <form id="loginForm">
+      <div class="field">
+        <label data-i18n="lbl_email">Email</label>
+        <input type="email" required data-i18n-ph="ph_email" placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label data-i18n="lbl_pass">Пароль</label>
+        <input type="password" required data-i18n-ph="ph_pass" placeholder="••••••••">
+      </div>
+      <button type="submit" class="btn btn-solid" data-i18n="btn_login2">Войти</button>
+    </form>
+    <div class="modal-switch">
+      <span data-i18n="login_noacc">Нет аккаунта?</span>
+      <button id="toRegister" data-i18n="btn_register2">Зарегистрироваться</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ REGISTER MODAL ============ -->
+<div class="overlay" id="registerOverlay">
+  <div class="modal">
+    <button class="modal-close" id="closeRegister">&times;</button>
+    <span class="swoosh">
+      <svg width="26" height="26" viewBox="0 0 100 100" fill="none">
+        <path d="M50 8 C 30 8 30 50 50 50 C 70 50 70 92 50 92" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" fill="none"/>
+      </svg>
+    </span>
+    <h2 data-i18n="reg_title">Создать аккаунт</h2>
+    <p class="modal-sub" data-i18n="reg_sub">Присоединяйтесь и получайте персональные скидки</p>
+    <form id="registerForm">
+      <div class="field">
+        <label data-i18n="lbl_name">Имя</label>
+        <input type="text" required data-i18n-ph="ph_name" placeholder="Ваше имя">
+      </div>
+      <div class="field">
+        <label data-i18n="lbl_email">Email</label>
+        <input type="email" required data-i18n-ph="ph_email" placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label data-i18n="lbl_phone">Телефон</label>
+        <input type="tel" required data-i18n-ph="ph_phone" placeholder="+992 00 000 00 00">
+      </div>
+      <div class="field">
+        <label data-i18n="lbl_pass">Пароль</label>
+        <input type="password" required data-i18n-ph="ph_pass" placeholder="••••••••">
+      </div>
+      <button type="submit" class="btn btn-solid" data-i18n="btn_register3">Зарегистрироваться</button>
+    </form>
+    <div class="modal-switch">
+      <span data-i18n="reg_hasacc">Уже есть аккаунт?</span>
+      <button id="toLogin" data-i18n="btn_login3">Войти</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRODUCT MODAL (meters + color) ============ -->
+<div class="overlay" id="productOverlay">
+  <div class="modal modal-product">
+    <button class="modal-close" id="closeProduct">&times;</button>
+    <div class="product-modal-media">
+      <img id="pmImage" src="" alt="">
+      <div class="pm-badge" id="pmBadge"></div>
+    </div>
+    <div class="product-modal-body">
+      <div class="pm-cat" id="pmCat"></div>
+      <h2 class="pm-name" id="pmName"></h2>
+      <div class="pm-price-row">
+        <span class="pm-price mono" id="pmUnitPrice"></span>
+        <span class="pm-per" data-i18n="pm_per_meter">за метр</span>
+      </div>
+
+      <div class="pm-section">
+        <div class="pm-label" data-i18n="pm_color">Цвет</div>
+        <div class="pm-colors" id="pmColors"></div>
+      </div>
+
+      <div class="pm-section">
+        <div class="pm-label" data-i18n="pm_meters">Сколько метров?</div>
+        <div class="pm-meter-ctrl">
+          <button type="button" id="pmMinus">−</button>
+          <span class="mono" id="pmMeters">1.5</span>
+          <span class="pm-unit" data-i18n="pm_m">м</span>
+          <button type="button" id="pmPlus">+</button>
+        </div>
+      </div>
+
+      <div class="pm-total-row">
+        <span data-i18n="pm_total">Итого</span>
+        <span class="mono" id="pmTotal"></span>
+      </div>
+      <button class="btn btn-solid" id="pmAddToCart" style="width:100%;padding:15px;" data-i18n="pm_add">Добавить в корзину</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<script src="index.js"></script>
+</body>
+</html>
