@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ахбори Тоҷикистон | Навгониҳои муосир</title>
+    <!-- Пайваст кардани файли CSS -->
     <link rel="stylesheet" href="najib.css">
 </head>
 <body>
 
+    <!-- САРЛАВҲА -->
     <header>
         <div class="container header-wrapper">
             <div class="logo">
@@ -25,85 +27,95 @@
 
     <div class="container">
         
+        <!-- СЛАЙДЕРИ ЗАМОНАВӢ -->
         <div class="slider-container">
             <div class="slides">
-                <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=1200&q=80');">
+                <!-- Слайди 1: Кӯҳҳои Помир -->
+                <div class="slide active slide-pamir">
                     <div class="slide-content">
-                        <span class="slide-tag">Сайёҳӣ</span>
-                        <h2>Рушди сайёҳӣ дар Бадахшон</h2>
-                        <p>Мавзеъҳои сайёҳии Помир имсол рекорди нави қабули сайёҳони хориҷиро гузоштанд.</p>
+                        <span class="slide-tag">Табиат</span>
+                        <h2>Шоҳроҳи Помир ва кӯҳҳои осмонбӯс</h2>
+                        <p>Помири Тоҷикистон ҳамчун "Боми Ҷаҳон" сайёҳони бештари хориҷиро ба худ ҷалб мекунад.</p>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=1200&q=80');">
-                    <div class="slide-content">
-                        <span class="slide-tag">Иқтисод</span>
-                        <h2>НБО Роғун: Бунёди агрегати навбатӣ</h2>
-                        <p>Дар иншооти бузурги аср корҳо бо суръати баланд идома доранд.</p>
-                    </div>
-                </div>
-                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');">
+                <!-- Слайди 2: Душанбе -->
+                <div class="slide slide-dushanbe">
                     <div class="slide-content">
                         <span class="slide-tag">Пойтахт</span>
-                        <h2>Ободонии пойтахт — Душанбе шаҳри сабз</h2>
-                        <p>Дар пойтахт боғҳои нав ва гулгаштҳои муосир барои сокинон дастрас шуданд.</p>
+                        <h2>Майдони Истиқлол ва зебоиҳои Душанбе</h2>
+                        <p>Пойтахти кишвар, шаҳри Душанбе, бо боғҳои сабз ва фаввораҳои муосираш шабона ҷилвагари дигар дорад.</p>
+                    </div>
+                </div>
+                <!-- Слайди 3: Роғун -->
+                <div class="slide slide-rogun">
+                    <div class="slide-content">
+                        <span class="slide-tag">Иқтисод</span>
+                        <h2>НБО Роғун — Нури Тоҷикистон</h2>
+                        <p>Бунёди иншооти бузурги аср ва марҳилаҳои нави сохтмони агрегатҳо бо суръат идома дорад.</p>
                     </div>
                 </div>
             </div>
             
+            <!-- Тугмаҳои идоракунии слайдер -->
             <button class="slider-btn prev" id="prevBtn">&#10094;</button>
             <button class="slider-btn next" id="nextBtn">&#10095;</button>
 
+            <!-- Нуқтаҳо (Dots) -->
             <div class="dots-container" id="dotsContainer"></div>
         </div>
 
-        <h2 class="section-title">Навгониҳои охирин</h2>
+        <!-- БАХШИ ХАБАРҲО (GRID) -->
+        <h2 class="section-title">Манзараҳо ва Навгониҳо</h2>
         <div class="news-grid">
             
+            <!-- Корти 1: Искандаркӯл -->
             <div class="news-card">
                 <div class="news-img-wrapper">
-                    <div class="news-img" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div class="news-img card-iskanderkul"></div>
                 </div>
                 <div class="news-info">
-                    <span class="news-category">Технология</span>
-                    <h3>Гузариш ба иқтисоди рақамӣ дар Ҷумҳурӣ</h3>
-                    <p>Хизматрасониҳои давлатӣ ва низоми бонкӣ пурра ба шакли электронӣ гузаронида мешаванд.</p>
-                    <span class="read-more" onclick="openNews('Гузариш ба иқтисоди рақамӣ', 'Мувофиқи барномаи нави давлатӣ, ҳамаи сохторҳои давлатии Тоҷикистон ба низоми ягонаи рақамӣ пайваст карда мешаванд. Ин имкон медиҳад, ки навбатпойиҳо ва бюрократия аз байн бурда шавад.')">Муфассал &rarr;</span>
+                    <span class="news-category">Сайёҳӣ</span>
+                    <h3>Афсонаи табиат — Искандаркӯли зарин</h3>
+                    <p>Кӯли афсонавии Искандаркӯл дар дили кӯҳҳои Фан яке аз гавҳарҳои асосии сайёҳии Тоҷикистон ба шумор меравад.</p>
+                    <span class="read-more" onclick="openNews('Искандаркӯли зарин', 'Искандаркӯл дар баландии беш аз 2100 метр аз сатҳи баҳр ҷойгир буда, таърихи қадимӣ ва афсонаҳои ҷолибе дорад. Имсол инфрасохтори атрофи кӯл барои қабули сайёҳон боз ҳам муосиртар карда шуд.')">Муфассал &rarr;</span>
                 </div>
             </div>
 
+            <!-- Корти 2: Қалъаи Ҳисор -->
             <div class="news-card">
                 <div class="news-img-wrapper">
-                    <div class="news-img" style="background-image: url('https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div class="news-img card-hisor"></div>
                 </div>
                 <div class="news-info">
-                    <span class="news-category">Варзиш</span>
-                    <h3>Варзишгарони тоҷик дар мусобиқаҳо</h3>
-                    <p>Паҳлавонони тоҷик дар мусобиқаи байналмилалии ҷудо соҳиби медалҳои тилло شدند.</p>
-                    <span class="read-more" onclick="openNews('Ғалабаи Варзишгарон', 'Ҷудокорони машҳури кишвар дар мусобиқаи охирини Гран-При шарафи Тоҷикистонро ҳимоя کرده, ду медали тилло ва як биринҷӣ ба даст оварданд.')">Муфассал &rarr;</span>
+                    <span class="news-category">Таърих</span>
+                    <h3>Қалъаи Ҳисор — Мероси ниёгон</h3>
+                    <p>Маҷмааи таърихию фарҳангии Қалъаи Ҳисор ҳамчун шоҳиди зиндаи таърихи 3000-солаи тоҷикон муаррифӣ мешавад.</p>
+                    <span class="read-more" onclick="openNews('Қалъаи Ҳисор', 'Қалъаи Ҳисор яке аз ёдгориҳои беназири таърихии Тоҷикистон аст. Дар канори он осорхона ва корвонсаройҳои қадимӣ босозӣ шудаанд ва он ба як маркази бузурги сайёҳии фарҳангӣ табдил ёфтааст.')">Муфассал &rarr;</span>
                 </div>
             </div>
 
+            <!-- Корти 3: Сарез -->
             <div class="news-card">
                 <div class="news-img-wrapper">
-                    <div class="news-img" style="background-image: url('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div class="news-img card-sarez"></div>
                 </div>
                 <div class="news-info">
-                    <span class="news-category">Фарҳанг</span>
-                    <h3>Ҷашни Наврӯзи байналмилалӣ</h3>
-                    <p>Дар тамоми гӯшаву канори кишвар омодагиҳо ба ҷашни кӯҳанбунёди Наврӯз оғоз ёфтанд.</p>
-                    <span class="read-more" onclick="openNews('Ҷашни Наврӯз', 'Имсол ҷашни Наврӯз дар сатҳи байналмилалӣ баргузор мегардад. Меҳмонон аз зиёда аз 20 давлати ҷаҳон барои тамошои сунатҳои миллии мо ба Тоҷикистон ташриф меоранд.')">Муфассал &rarr;</span>
+                    <span class="news-category">Экология</span>
+                    <h3>Кӯли Сарез — Мӯъҷизаи кӯҳҳои Помир</h3>
+                    <p>Муъҷизаи табиии кӯҳҳои Муғоб, кӯли Сарез, таҳти назорати доимии илмӣ ва экологӣ қарор дорад.</p>
+                    <span class="read-more" onclick="openNews('Кӯли Сарез', 'Кӯли Сарез, ки бо номи "Деви хуфта" низ маъруф аст, соли 1911 дар натиҷаи заминларзаи шадид ба вуҷуд омадааст. Имрӯзҳо амнияти ин ҳавзи бузурги оби ширин тавассути технологияҳои муосири рақамӣ назорат карда мешавад.')">Муфассал &rarr;</span>
                 </div>
             </div>
 
         </div>
     </div>
 
+    <!-- ПОП-АПИ ДИНАМИКӢ -->
     <div class="popup-overlay" id="popupOverlay">
         <div class="popup-box" id="popupBox">
             <span class="popup-close" id="closePopupBtn">&times;</span>
             <h2 id="popupTitle">Обуна ба ахбор!</h2>
-            <div id="popupContent">
-                </div>
+            <div id="popupContent"></div>
         </div>
     </div>
 
@@ -113,6 +125,7 @@
         </div>
     </footer>
 
+    <!-- Пайваст кардани файли JavaScript -->
     <script src="najib.js"></script>
 </body>
 </html>
