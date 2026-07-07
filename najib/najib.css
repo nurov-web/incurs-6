@@ -1,0 +1,311 @@
+/* --- СТИЛҲОИ УМУМИӢ --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- САРЛАВҲА (HEADER) --- */
+header {
+    background: linear-gradient(135deg, #005a9c 0%, #004477 100%);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #ffffff, #cca133);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav a {
+    color: #f1f5f9;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover, nav a.active {
+    color: #cca133;
+    border-bottom: 2px solid #cca133;
+}
+
+/* --- СЛАЙДЕРИ ПУРРАРАВНАҚ --- */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    animation: fadeEffect 0.8s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 70%);
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    color: white;
+    padding: 40px;
+}
+
+.slide-tag {
+    background-color: #d9534f;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.slide-content h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Тугмаҳои Слайдер */
+.slider-btn {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.4);
+    width: 45px; height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background: #cca133;
+    border-color: #cca133;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.dots-container {
+    position: absolute;
+    bottom: 20px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px; height: 10px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: #cca133;
+    width: 25px;
+    border-radius: 10px;
+}
+
+/* --- КОРТҲОИ ХАБАРӢ (GRID) --- */
+.section-title {
+    font-size: 1.6rem;
+    margin: 30px 0 20px 0;
+    position: relative;
+    padding-left: 15px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0; width: 5px;
+    background: #005a9c;
+    border-radius: 3px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.news-img-wrapper { overflow: hidden; }
+
+.news-img {
+    width: 100%; height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.news-card:hover .news-img { transform: scale(1.04); }
+
+.news-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-category {
+    color: #005a9c;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.news-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.news-info p {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.read-more {
+    color: #005a9c;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.read-more:hover { color: #cca133; }
+
+/* --- ПОП-АП (МОДАЛӢ) --- */
+.popup-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 2000;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1; pointer-events: auto;
+}
+
+.popup-box {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    max-width: 500px; width: 90%;
+    text-align: center;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.4s ease;
+}
+
+.popup-overlay.active .popup-box { transform: translateY(0); }
+
+.popup-close {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 1.8rem; cursor: pointer;
+    color: #94a3b8;
+}
+
+.popup-box h2 { margin-bottom: 15px; color: #005a9c; }
+
+/* --- ПОЁНВАРҚ (FOOTER) --- */
+footer {
+    background: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .header-wrapper { flex-direction: column; gap: 10px; }
+    .slider-container { height: 320px; }
+    .slide-content h2 { font-size: 1.5rem; }
+}
