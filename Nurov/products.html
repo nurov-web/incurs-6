@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дорухонаи Саломатӣ — Маҳсулот</title>
+<link rel="stylesheet" href="4.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">💊 Саломатӣ</a>
+    <nav class="nav">
+      <a href="index.html">Асосӣ</a>
+      <a href="products.html" class="active">Маҳсулот</a>
+      <a href="contact.html">Тамос</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-title">
+  <h1>Маҳсулоти дорухона</h1>
+  <p>10 маҳсулоти маъмултарин бо нархҳои мувофиқ</p>
+</section>
+
+<section class="products container" id="productGrid"></section>
+
+<footer class="footer">
+  <p>© 2026 Дорухонаи Саломатӣ. Ҳамаи ҳуқуқҳо ҳифз шудаанд.</p>
+</footer>
+
+<!-- Попап -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="modal-icon" id="modalIcon"></div>
+    <h2 id="modalName"></h2>
+    <p id="modalDesc"></p>
+    <div class="modal-price" id="modalPrice"></div>
+    <button class="btn" onclick="addToCart()">Илова ба сабад</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">Ба сабад илова шуд!</div>
+
+<script src="4.js"></script>
+</body>
+</html>
